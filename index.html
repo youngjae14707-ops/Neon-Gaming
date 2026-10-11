@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXUS | Gaming Hub</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family:'Kanit',sans-serif;
+  background:#090914;
+  color:white;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+body::before {
+  content:'';
+  position:fixed;
+  width:500px;height:500px;
+  background:#7028ff;
+  filter:blur(180px);
+  opacity:.18;
+  top:-200px;left:-100px;
+  z-index:-1;
+}
+
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 8%;
+  border-bottom:1px solid #ffffff12;
+}
+
+.logo {
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:3px;
+  color:#b794ff;
+}
+
+nav a {
+  color:#aaa;
+  text-decoration:none;
+  margin-left:25px;
+  transition:.3s;
+}
+nav a:hover { color:#b794ff; }
+
+.hero {
+  max-width:1100px;
+  margin:65px auto;
+  padding:0 25px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.tag {
+  color:#c3a5ff;
+  border:1px solid #7546bb;
+  padding:7px 15px;
+  border-radius:30px;
+  display:inline-block;
+  font-size:13px;
+  margin-bottom:22px;
+}
+
+h1 {
+  font-size:clamp(38px,5vw,65px);
+  line-height:1.2;
+  margin-bottom:20px;
+}
+
+h1 span {
+  background:linear-gradient(90deg,#a78bfa,#38bdf8);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.desc {
+  color:#aaa8bf;
+  line-height:1.9;
+  margin-bottom:30px;
+}
+
+.btn {
+  border:0;
+  background:linear-gradient(90deg,#7c3aed,#4f46e5);
+  color:white;
+  padding:14px 27px;
+  border-radius:12px;
+  font-family:inherit;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 0 25px #7c3aed50;
+  transition:.3s;
+}
+
+.btn:hover {
+  transform:translateY(-4px);
+  box-shadow:0 0 35px #7c3aed90;
+}
+
+.visual {
+  position:relative;
+  border:1px solid #9b7aff50;
+  border-radius:25px;
+  padding:10px;
+  background:#171329;
+  box-shadow:0 0 60px #692dff20;
+  animation:float 4s ease-in-out infinite;
+}
+
+.visual img {
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  border-radius:18px;
+}
+
+.status {
+  position:absolute;
+  bottom:25px;
+  left:25px;
+  right:25px;
+  background:#100d20dd;
+  backdrop-filter:blur(12px);
+  border:1px solid #ffffff20;
+  border-radius:14px;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.dot {
+  display:inline-block;
+  width:8px;height:8px;
+  border-radius:50%;
+  background:#4ade80;
+  margin-right:7px;
+}
+
+.section {
+  max-width:1100px;
+  margin:0 auto 70px;
+  padding:0 25px;
+}
+
+.section h2 {
+  font-size:28px;
+  margin-bottom:25px;
+}
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card {
+  background:linear-gradient(145deg,#1c1930,#11101d);
+  border:1px solid #ffffff12;
+  padding:25px;
+  border-radius:18px;
+  transition:.3s;
+}
+
+.card:hover {
+  transform:translateY(-7px);
+  border-color:#9066ff;
+  box-shadow:0 10px 35px #682bff20;
+}
+
+.card .icon {
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.card h3 { margin-bottom:8px; }
+.card p { color:#9996b2; font-size:14px; line-height:1.8; }
+
+footer {
+  text-align:center;
+  color:#77738e;
+  padding:25px;
+  border-top:1px solid #ffffff12;
+}
+
+@keyframes float {
+  0%,100% { transform:translateY(0); }
+  50% { transform:translateY(-10px); }
+}
+
+@media(max-width:700px) {
+  nav { padding:20px 5%; }
+  nav a { margin-left:10px; font-size:12px; }
+  .hero { grid-template-columns:1fr; margin:40px auto; }
+  .visual img { height:260px; }
+  .cards { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">NEXUS.</div>
+  <div>
+    <a href="#home">หน้าหลัก</a>
+    <a href="#features">ฟีเจอร์</a>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div>
+    <div class="tag">✦ NEXT GENERATION GAMING</div>
+    <h1>LEVEL UP<br>YOUR <span>GAME.</span></h1>
+    <p class="desc">
+      ยินดีต้อนรับสู่โลกแห่งเกมยุคใหม่
+      พื้นที่สำหรับนักเล่นเกมที่ต้องการประสบการณ์
+      สุดล้ำในสไตล์ที่ไม่เหมือนใคร
+    </p>
+    <button class="btn" onclick="startGame()">
+      ✦ เริ่มต้นใช้งาน
+    </button>
+  </div>
+
+  <div class="visual">
+    <img
+      src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1000&q=85"
+      alt="Gaming setup">
+    <div class="status">
+      <div>
+        <div style="font-weight:600">Gaming Station</div>
+        <small style="color:#aaa">Ultimate Experience</small>
+      </div>
+      <div style="color:#4ade80">
+        <span class="dot"></span>ONLINE
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <h2>✦ Explore The Universe</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🎮</div>
+      <h3>Gaming Zone</h3>
+      <p>เปิดประสบการณ์เกมสุดมัน
+      ในบรรยากาศแห่งอนาคต</p>
+    </div>
+    <div class="card">
+      <div class="icon">⚡</div>
+      <h3>High Performance</h3>
+      <p>ดีไซน์ที่เน้นความรวดเร็ว
+      ลื่นไหล และทันสมัย</p>
+    </div>
+    <div class="card">
+      <div class="icon">🏆</div>
+      <h3>Your Achievement</h3>
+      <p>ก้าวไปอีกระดับและสร้าง
+      ความสำเร็จในแบบของคุณ</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  © 2026 NEXUS GAMING HUB | Designed with passion ✦
+</footer>
+
+<script>
+function startGame() {
+  alert('ยินดีต้อนรับสู่ NEXUS GAMING HUB! 🎮');
+}
+</script>
+
+</body>
+</html>
